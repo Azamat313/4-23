@@ -1,0 +1,132 @@
+I don't know what I'm doing...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .hobbies {
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required minlength="2" maxlength="30">
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required minlength="2" maxlength="30">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="6">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="first-name">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label>
+
+        <label>Hobbies/Interests:</label>
+        <div class="hobbies">
+            <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+            <label for="hobby1">Reading</label>
+            <input type="checkbox" id="hobby2" name="hobbies" value="Traveling">
+            <label for="hobby2">Traveling</label>
+            <input type="checkbox" id="hobby3" name="hobbies" value="Sports">
+            <label for="hobby3">Sports</label>
+            <input type="checkbox" id="hobby4" name="hobbies" value="Music">
+            <label for="hobby4">Music</label>
+            <input type="checkbox" id="hobby5" name="hobbies" value="Drawing">
+            <label for="hobby5">Drawing</label>
+            <input type="checkbox" id="hobby6" name="hobbies" value="Video Games">
+            <label for="hobby6">Video Games</label>
+            <input type="checkbox" id="hobby7" name="hobbies" value="Killing">
+            <label for="hobby7">Killing</label>
+            <input type="checkbox" id="hobby8" name="hobbies" value="Eating">
+            <label for="hobby8">Eating</label>
+            <input type="checkbox" id="hobby9" name="hobbies" value="Drugs">
+            <label for="hobby9">Drugs</label>
+            <input type="checkbox" id="hobby10" name="hobbies" value="Place Holder">
+            <label for="hobby10">Place Holder</label>
+            
+        </div>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="australia">Australia</option>
+            <option value="rus">Russia</option>
+            <option value="kz">Kazakhstan</option>
+            <option value="tr">Turkey</option>
+            <option value="ukrania">Ukrania</option>
+            <option value="lith">Lithuania</option>
+            <option value="">Australia</option>
+            <option value="other">Other</option>
+        </
