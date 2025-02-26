@@ -33,14 +33,14 @@ input, select, textarea {
     border-radius: 6px;
     font-size: 14px;
 }
-.checkbox-group {
+.checkbox-group, .radio-group {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 5px;
     justify-content: flex-start;
 }
-.checkbox-group label {
+.checkbox-group label, .radio-group label {
     font-weight: normal;
     display: flex;
     align-items: center;
