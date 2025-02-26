@@ -3,5 +3,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="#" method="POST">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label>Gender</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+
+            <label>Hobbies/Interests</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="hobbies" value="sport"> Sport</label>
+                <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+                <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+            </div>
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="russia">Russia</option>
+                <option value="usa">USA</option>
+                <option value="germany">Germany</option>
+            </select>
+
+            <label for="comments">Additional Information</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
 </html>
