@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Registration</h1>
+
+        <form class="name-password">
+            <input class="ask" type="text" placeholder="Enter your first name">
+            <input class="ask" type="text" placeholder="Enter your last name">
+            <input class="ask" placeholder="Enter your E-mail">
+            <input class="ask" placeholder="Enter your password">
+            <input class="ask" placeholder="Confirm your password">
+
+        </form>
+        <form class="date">
+            <p class="lab-date">Enter your Date of Birth: </p>
+            <input class="data"  type="date">
+        </form>
+        <form class="gender">
+            <input type="radio" name="gender" required> Man
+            <input type="radio" name="gender" required> Woman
+            <input type="radio" name="gender" required> Other
+        </form>
+        <form class="box">
+            <label for="hobbies">Hobbies/Interests:</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox" id="sports" name="hobbies" value="Sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="travel" name="hobbies" value="Travel">
+        <label for="travel">Travel</label><br>
+        <input type="checkbox" id="music" name="hobbies" value="Music">
+        <label for="music">Music</label><br><br>
+        </form>
+        <form class="country">
+            <p class="country-item">Choose your country</p>
+                <select name="" id="" class="choose">
+                    <option value="text">Kazakhstan</option>
+                    <option value="text">Russia</option>
+                    <option value="text">China</option>
+                    <option value="text">US</option>
+                    <option value="text">Uzbekistan</option>
+                </select>
+        </form>
+        <form class="comments">
+            <label for="comments">Comments or Additional Information:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </form>
+
+        <button class="button">Register</button>
+    </div>
+</body>
+</html>
