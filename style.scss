@@ -1,0 +1,73 @@
+
+$primary-color: #df82e7;
+$background-color: #c0bbbb;
+$text-color: #333;
+$border-color: #312e2e;
+$mobile-width: 768px;
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+    label {
+        font-weight: bold;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+    }
+
+    .radio-group, .checkbox-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+
+@media (max-width: $mobile-width) {
+    body {
+        margin: 20px;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
