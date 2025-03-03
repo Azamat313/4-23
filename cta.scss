@@ -1,0 +1,18 @@
+.cta {
+    padding: 100px 0;
+    background-color: $primary-color;
+    color: $white;
+
+    .cta-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+
+        .cta-text {
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+    }
+}

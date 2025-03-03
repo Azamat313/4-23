@@ -1,0 +1,31 @@
+.testimonials {
+    padding: 100px 0;
+
+    .testimonials-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .testimonial-card {
+            background-color: $white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 0 auto;
+            max-width: 800px;
+
+            .testimonial-author {
+                display: flex;
+                align-items: center;
+
+                .author-image {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: #DDD;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}

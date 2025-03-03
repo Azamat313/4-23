@@ -1,0 +1,93 @@
+.hero {
+    height: 700px;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    padding-top: 160px;
+    color: $white;
+
+    .hero-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-content {
+            width: 50%;
+
+            .hero-subtitle {
+                font-size: $font-size-large;
+                margin-bottom: 40px;
+                opacity: 0.9;
+            }
+
+            .hero-buttons {
+                display: flex;
+
+                .primary-button {
+                    background-color: $white;
+                    color: $primary-color;
+                    border: none;
+                    padding: 15px 30px;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    font-size: $font-size-base;
+                    cursor: pointer;
+                    margin-right: 16px;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: translateY(-3px);
+                    }
+                }
+
+                .secondary-button {
+                    background-color: transparent;
+                    color: $white;
+                    border: 2px solid $white;
+                    padding: 15px 30px;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    font-size: $font-size-base;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+
+        .hero-image {
+            width: 40%;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    @include respond-to(md) {
+        height: auto;
+        padding-top: 120px;
+
+        .hero-container {
+            flex-direction: column;
+            text-align: center;
+
+            .hero-content {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}

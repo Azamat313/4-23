@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: $font-size-hero-title;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: $font-size-xxxlarge;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: $font-size-large;
+    color: $gray;
+}
+
+.feature-title {
+    font-size: $font-size-xlarge;
+    margin-bottom: 16px;
+}
+
+.testimonial-text {
+    font-size: $font-size-large;
+    line-height: 1.7;
+    font-style: italic;
+    color: #444;
+}
+
+.author-info h4 {
+    font-size: $font-size-large;
+    margin-bottom: 4px;
+}
+
+.cta-title {
+    font-size: $font-size-xxxlarge;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: $font-size-xlarge;
+    margin-bottom: 24px;
+}
