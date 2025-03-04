@@ -128,7 +128,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Планшеты (до 1024px) */
+/* Планшеты до 1024 */
 @media (max-width: 1024px) {
     .nav-container, .hero-container {
         width: 90%;
@@ -154,7 +154,7 @@ body {
     }
 }
 
-/* Телефоны (до 768px) */
+/* Телефоны до 768 */
 @media (max-width: 768px) {
     .navbar {
         height: auto;
@@ -207,7 +207,7 @@ body {
     }
 }
 
-/* Маленькие телефоны (до 480px) */
+/* Маленькие телефоны до 480 */
 @media (max-width: 480px) {
     .hero {
         padding-top: 100px;
