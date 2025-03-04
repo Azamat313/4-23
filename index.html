@@ -3,59 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style.scss">
+    <title>Horizon - Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Registration form</h2>
-    <form>
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
 
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Horizon</div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <!-- Бургер-меню -->
+            <div class="burger-menu" onclick="toggleMenu()">☰</div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
-
-        <label>Gender:</label>
-        <div class="radio-group">
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="nav-button">Get Started</button>
         </div>
+    </nav>
 
-        <label>Hobbies:</label>
-        <div class="checkbox-group">
-            <input type="checkbox" id="reading" name="hobbies" value="reading">
-            <label for="reading">Reading</label>
-            <input type="checkbox" id="sports" name="hobbies" value="sports">
-            <label for="sports">Sports</label>
-            <input type="checkbox" id="music" name="hobbies" value="music">
-            <label for="music">Music</label>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Elevate Your Digital Presence Today</h1>
+                <p class="hero-subtitle">
+                    Transform your business with our cutting-edge solutions designed to boost your online presence and drive growth.
+                </p>
+                <div class="hero-buttons">
+                    <button class="primary-button">Get Started</button>
+                    <button class="secondary-button">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="placeholder.jpg" alt="Digital Solutions" />
+            </div>
         </div>
+    </section>
 
-        <label for="country">Country:</label>
-        <select id="country" name="country">
-            <option value="usa">USA</option>
-            <option value="kazakhstan">Kazakhstan</option>
-            <option value="canada">Japan</option>
-        </select>
-
-        <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments"></textarea>
-
-        <button type="submit">Register</button>
-    </form>
+    <script src="script.js"></script>
 </body>
 </html>
