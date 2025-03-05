@@ -1,0 +1,135 @@
+@import "./style.css";
+$primary-color: #4A6CF7;
+$secondary-color: #8A74F9;
+$text-color: #333;
+$light-gray: #F8F9FF;
+$dark-gray: #666;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$max-width: 1200px;
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    background-color: white;
+    height: 80px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    @include flex-center;
+    justify-content: space-between;
+}
+
+.nav-button {
+    @include button($primary-color, white);
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+
+.hero {
+    height: 700px;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    padding-top: 160px;
+    color: white;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primary-button {
+    @include button(white, $primary-color);
+    padding: 15px 30px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .nav-container, .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .primary-button {
+        width: 100%;
+        text-align: center;
+    }
+}
