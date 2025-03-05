@@ -1,0 +1,36 @@
+// Переменные
+$primary-color: #4A6CF7;
+$secondary-color: #8A74F9;
+$text-color: #333;
+$light-text-color: #666;
+$background-color: #F8F9FF;
+$white: #fff;
+$black: #000;
+$footer-bg: #151C39;
+$footer-text: #AAA;
+
+// Миксины
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $easing: ease) {
+    transition: $property $duration $easing;
+}
+
+// Базовые стили
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+// Навига
