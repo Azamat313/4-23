@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizon - Digital Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,12 +11,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Horizon</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="mobile-menu-toggle">☰</label>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">Pricing</a></li>
+                <li><a href="#" class="nav-link">Testimonials</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-button">Get Started</button>
         </div>
@@ -33,7 +36,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/400/320" alt="placeholder" />
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital solutions" />
             </div>
         </div>
     </section>
@@ -133,5 +136,60 @@
     <div class="copyright">
         <p>© 2025 Horizon. All rights reserved.</p>
     </div>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinkItems = document.querySelectorAll('.nav-link');
+            const mainContent = document.querySelectorAll('section, footer');
+            
+            // Function to close the menu
+            function closeMenu() {
+                menuToggle.checked = false;
+                navLinks.style.maxHeight = '0';
+                navLinks.style.padding = '0';
+            }
+            
+            // Toggle menu when burger icon is clicked
+            mobileMenuToggle.addEventListener('click', function() {
+                menuToggle.checked = !menuToggle.checked;
+                if (menuToggle.checked) {
+                    navLinks.style.maxHeight = '300px';
+                    navLinks.style.padding = '15px 0';
+                } else {
+                    closeMenu();
+                }
+            });
+            
+            // Close menu when a nav link is clicked
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 767) {
+                        e.preventDefault(); // Prevent default only on mobile
+                        closeMenu();
+                    }
+                });
+            });
+            
+            // Close menu when clicking outside the menu
+            mainContent.forEach(section => {
+                section.addEventListener('click', function() {
+                    if (menuToggle.checked && window.innerWidth <= 767) {
+                        closeMenu();
+                    }
+                });
+            });
+            
+            // Close menu when window is resized to desktop size
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 767 && menuToggle.checked) {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
