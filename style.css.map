@@ -1,0 +1,5 @@
+{
+  "command": "sass",
+  "input": "style.sass",
+  "output": "style.css"
+}
