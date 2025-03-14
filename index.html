@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор возраста</title>
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <div class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="calculator-icon">
+                    <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                    <line x1="8" x2="16" y1="6" y2="6"></line>
+                    <line x1="16" x2="16" y1="14" y2="18"></line>
+                    <path d="M16 10h.01"></path>
+                    <path d="M12 10h.01"></path>
+                    <path d="M8 10h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M8 14h.01"></path>
+                    <path d="M12 18h.01"></path>
+                    <path d="M8 18h.01"></path>
+                </svg>
+                <h1>Калькулятор возраста</h1>
+            </div>
+
+            <div class="input-group">
+                <label for="birthYear">Год рождения</label>
+                <input 
+                    type="number" 
+                    id="birthYear" 
+                    placeholder="Например: 1990"
+                    min="1900"
+                    max="2024">
+            </div>
+
+            <div id="results" class="results hidden">
+                <div class="result-card age">
+                    <p><strong>Ваш возраст:</strong> <span id="ageResult">--</span> лет</p>
+                </div>
+                
+                <div class="result-card status">
+                    <p><strong>Статус:</strong> <span id="adultStatus">--</span></p>
+                </div>
+
+                <div class="result-card days">
+                    <p><strong>Прожито примерно дней:</strong> <span id="daysLived">--</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
