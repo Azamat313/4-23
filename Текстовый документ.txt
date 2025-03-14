@@ -1,0 +1,28 @@
+//Task 1
+
+const price = 100;
+const sale = 0.3;
+console.log(price * (1 - sale));
+console.log(price-(price * (1 - sale)));
+
+//Task 2
+
+function calculator(distance, fuel, fuelPrice, time) {
+    let fuelNeeded = (distance / 100) * fuel;
+    let tripCost = fuelNeeded * price;
+    let travelTime = distance / time;
+    
+    return {
+        fuelNeeded: fuelNeeded.toFixed(2),
+        tripCost: tripCost.toFixed(2),
+        travelTime: travelTime.toFixed(2)
+    };
+}
+let distance = 500;    
+let fuel = 8;
+let fuelPrice = 200;  
+let time = 80; 
+
+
+let result = calculator(distance, fuel, price, time);
+console.log(result);
