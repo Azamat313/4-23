@@ -3,49 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon - Digital Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Age Calculator</title>
 </head>
 <body>
+    <script>
+        function calculateAge() {
+            let birthYear = prompt("Введите год вашего рождения:");
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - birthYear;
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Horizon</div>
+            if (isNaN(birthYear) || birthYear > currentYear || birthYear < 1900) {
+                alert("Пожалуйста, введите правильный год.");
+                return;
+            }
 
-            <!-- Бургер-меню -->
-            <div class="burger-menu" onclick="toggleMenu()">☰</div>
+            if (age >= 18) {
+                alert("Вам " + age + " лет. Вы совершеннолетний.");
+            } else {
+                alert("Вам " + age + " лет. Вы несовершеннолетний.");
+            }
 
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <button class="nav-button">Get Started</button>
-        </div>
-    </nav>
+            let daysLived = age * 365;
+            alert("Вы прожили примерно " + daysLived + " дней.");
+        }
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Elevate Your Digital Presence Today</h1>
-                <p class="hero-subtitle">
-                    Transform your business with our cutting-edge solutions designed to boost your online presence and drive growth.
-                </p>
-                <div class="hero-buttons">
-                    <button class="primary-button">Get Started</button>
-                    <button class="secondary-button">Learn More</button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="placeholder.jpg" alt="Digital Solutions" />
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+        calculateAge();
+    </script>                             
 </body>
 </html>
