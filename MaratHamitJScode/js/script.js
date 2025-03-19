@@ -1,5 +1,5 @@
-let price = 1000;  
-let discount = 15;  
+let price = 1000000;  
+let discount = 50;  
 
 let discountAmount = (price * discount) / 100;  
 let finalPrice = price - discountAmount;  
