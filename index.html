@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon - Digital Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Timer, Even Number Check, and Word Count</title>
 </head>
 <body>
+    <h2>Countdown Timer from 10 to 0</h2>
+    <p id="timer">10</p>
+    
+    <h2>Check If a Number is Even</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button id="checkButton">Check</button>
+    <p id="result"></p>
+    
+    <h2>Word Count</h2>
+    <textarea id="textInput" placeholder="Enter text"></textarea>
+    <button id="countWordsButton">Count Words</button>
+    <p id="wordCountResult"></p>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Horizon</div>
+    <script>
+        // Countdown Timer
+        let count = 10;
+        let timerElement = document.getElementById("timer");
+        let timer = setInterval(() => {
+            timerElement.innerText = count;
+            count--;
+            if (count < 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
 
-            <!-- Бургер-меню -->
-            <div class="burger-menu" onclick="toggleMenu()">☰</div>
-
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <button class="nav-button">Get Started</button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Elevate Your Digital Presence Today</h1>
-                <p class="hero-subtitle">
-                    Transform your business with our cutting-edge solutions designed to boost your online presence and drive growth.
-                </p>
-                <div class="hero-buttons">
-                    <button class="primary-button">Get Started</button>
-                    <button class="secondary-button">Learn More</button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="placeholder.jpg" alt="Digital Solutions" />
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+        // Even Number Check
+        document.getElementById("checkButton").onclick = () => {
+            let num = document.getElementById("numberInput").value;
+            let resultElement = document.getElementById("result");
+            let message = "Please enter a number!";
+            if (num !== "") {
+                message = (num % 2 === 0) ? "The number is even" : "The number is odd";
+            }
+            resultElement.innerText = message;
+        };
+        
+        // Word Count
+        document.getElementById("countWordsButton").onclick = () => {
+            let text = document.getElementById("textInput").value;
+            let words = text.trim().split(/\s+/);
+            let count = words[0] === "" ? 0 : words.length;
+            document.getElementById("wordCountResult").innerText = "Word count: " + count;
+        };
+    </script>
 </body>
 </html>
